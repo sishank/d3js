@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title>
+        <script type="text/javascript" src="d3/d3.min.js"></script>
+    </head>
+    <body>
+     <p> Hello hello this is is a paragraph </p>
+        <script type="text/javascript">
+            d3.select("p").text("hello world");
+            d3.select("body")
+              .append("p")
+              .style("color","red")
+              .text("what up");
+            var canvas = d3.select("body")
+              			.append("svg")
+              			.attr("width","500")
+              			.attr("height","500");
+            var circle = canvas.append("circle")
+            			.attr("cx",250)
+            			.attr("cy",250)
+            			.attr("r",50)
+            			.attr("fill","blue");
+            var rect = canvas.append("rect")
+            			.attr("height",250)
+            			.attr("width",250)
+            			.attr("fill","yellow");
+            var line = canvas.append("line")
+            			.attr("x1",0)
+            			.attr("y1",100)
+            			.attr("x2",400)
+            			.attr("y2",400)
+            			.attr("stroke","black")
+            			.attr("stroke-width","50");
+        </script>
+    </body>
+</html>     
